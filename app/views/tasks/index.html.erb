@@ -1,0 +1,18 @@
+<h1>INDEX.HTML.ERB</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+
+
+
+    <li>
+
+      <%= link_to task.title, task_path(task) %> <%= task.completed %>
+
+    </li>
+
+
+  <% end %>
+</ul>
+
+<%= link_to "ADD A NEW TASK", new_task_path %>
